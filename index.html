@@ -520,132 +520,7 @@
 		  </div>
 		  <div class="row ftco-animate justify-content-center">
 			<div class="col-md-12">
-			  <div class="carousel-testimony owl-carousel">
-				<div class="item">
-				  <div class="testimony-wrap-2 d-flex justify-content-center">
-					<img class="user-img" src="images/client_1.png" alt="">
-				  </div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_2.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-						<img class="user-img" src="images/client_3.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_4.png" alt="">
-				</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_5.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_6.png" alt="">
-					</div>
-				  </div>
-				  <div class="item">
-					  <div class="testimony-wrap-2 d-flex justify-content-center">
-						<img class="user-img" src="images/client_7.png" alt="">
-					  </div>
-				  </div>
-				  <div class="item">
-					  <div class="testimony-wrap-2 d-flex justify-content-center">
-						  <img class="user-img" src="images/client_8.png" alt="">
-					  </div>
-				  </div>
-				  <div class="item">
-					  <div class="testimony-wrap-2 d-flex justify-content-center">
-						<img class="user-img" src="images/client_9.png" alt="">
-				  </div>
-				  </div>
-				  <div class="item">
-					  <div class="testimony-wrap-2 d-flex justify-content-center">
-						<img class="user-img" src="images/client_10.png" alt="">
-					  </div>
-				  </div>
-				  <div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_11.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_12.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_13.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_14.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_15.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_16.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_17.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_18.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_19.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_20.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_21.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_22.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_23.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_24.png" alt="">
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-wrap-2 d-flex justify-content-center">
-					  <img class="user-img" src="images/client_25.png" alt="">
-					</div>
-				</div>
+			  <div id="client-logo-image" class="carousel-testimony owl-carousel">
 			  </div>
 			</div>
 		  </div>
@@ -749,6 +624,19 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/clients/get-client-logos.js"></script>
+
+  <script>
+    Promise.all([getClientLogoImage()])
+      .then(() => {
+        console.log("Data loaded successfully");
+      })
+      .catch((error) => {
+        console.error("Error loading data:", error);
+      });
+
+  </script>
     
   </body>
 </html>
