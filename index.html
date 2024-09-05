@@ -509,6 +509,13 @@
 			  </div>
 			</div>
 		  </div>
+
+		  <div class="row ftco-animate justify-content-center">
+			<div class="col-md-12">
+			  <div id="client-logo-image-2" class="carousel-testimony owl-carousel">
+			  </div>
+			</div>
+		  </div>
 		</div>
 	  </section>
 	  <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -613,7 +620,7 @@
   <script src="js/clients/get-client-logos.js"></script>
 
   <script>
-    Promise.all([getClientLogoImage()])
+    Promise.all([getClientLogoImage("client-logo-image", "client-1"), getClientLogoImage("client-logo-image-2", "client-2")])
       .then(() => {
         console.log("Data loaded successfully");
       })
