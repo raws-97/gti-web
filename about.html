@@ -205,6 +205,13 @@
           </div>
         </div>
         </div>
+
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div id="client-logo-image-2" class="carousel-testimony owl-carousel">
+            </div>
+          </div>
+          </div>
       </div>
       </section>
   
@@ -262,10 +269,15 @@
         <div class="col-md-6 col-lg-3">
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2">Subscribe Us!</h2>
-          <form action="#" class="subscribe-form">
+          <form id="subscribe-us-form" class="subscribe-form">
             <div class="form-group">
-            <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-            <input type="submit" value="Subscribe" class="form-control submit px-3">
+            <input type="text" name="email" class="form-control mb-2 text-center" placeholder="Enter email address">
+            <button type="submit" id="submit-button-subscribe" class="form-control submit px-3">Subscribe</button>
+            <center>
+              <div class="spinner-border" id="loading-subscribe" role="status" style="display: none; color: white;">
+                <span class="sr-only"></span>
+              </div>
+            </center>
             </div>
           </form>
           </div>
@@ -307,11 +319,15 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/form/subscribe.js"></script>
   <script src="js/config.js"></script>
   <script src="js/clients/get-client-logos.js"></script>
 
+  <script>subscribeUs()</script>
   <script>
-    Promise.all([getClientLogoImage()])
+    Promise.all([getClientLogoImage("client-logo-image", "client-1"), getClientLogoImage("client-logo-image-2", "client-2")])
       .then(() => {
         console.log("Data loaded successfully");
       })

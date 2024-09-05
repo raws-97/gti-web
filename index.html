@@ -467,26 +467,32 @@
 		            <h2 class="mb-4">Request A Quote</h2>
 		            <p>Connect with us today and discover how our tailored solutions can meet your unique needs. Let’s start a conversation about how we can help your business thrive.</p>
 		          </div>
-		          <form action="#" class="appointment-form ftco-animate">
+		          <form id="contact-us-form" class="appointment-form ftco-animate">
 		    				<div class="d-md-flex">
 			    				<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="Your Name">
+			    					<input type="text" name="name" class="form-control" placeholder="Your Name">
 			    				</div>
 			    				<div class="form-group ml-md-4">
-			    					<input type="email" class="form-control" placeholder="Your Email">
+			    					<input type="email" name="email" class="form-control" placeholder="Your Email">
 			    				</div>
 		    				</div>
 		    				<div class="d-md-flex">
 		    					<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="Phone">
+			    					<input type="text" name="phone" class="form-control" placeholder="Phone">
 			    				</div>
 		    					<div class="form-group ml-md-4">
-									<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+									<textarea name="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 			    				</div>
 		    				</div>
 		    				<div class="d-md-flex">
+								
 			            <div class="form-group ml-md-4">
-			              <input type="submit" value="Request A Quote" class="btn btn-white py-3 px-4">
+							<button type="submit" id="submit-button" class="btn btn-white py-3 px-4">Request A Quote</button>
+							<center>
+								<div class="spinner-border" id="loading" role="status" style="display: none; color: white;">
+									<span class="sr-only"></span>
+								</div>
+							</center>
 			            </div>
 		    				</div>
 		    			</form>
@@ -571,10 +577,15 @@
 			<div class="col-md-6 col-lg-3">
 			  <div class="ftco-footer-widget mb-5">
 				  <h2 class="ftco-heading-2">Subscribe Us!</h2>
-				<form action="#" class="subscribe-form">
+				<form id="subscribe-us-form" class="subscribe-form">
 				  <div class="form-group">
-					<input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-					<input type="submit" value="Subscribe" class="form-control submit px-3">
+					<input type="text" name="email" class="form-control mb-2 text-center" placeholder="Enter email address">
+					<button type="submit" id="submit-button-subscribe" class="form-control submit px-3">Subscribe</button>
+					<center>
+						<div class="spinner-border" id="loading-subscribe" role="status" style="display: none; color: white;">
+							<span class="sr-only"></span>
+						</div>
+					</center>
 				  </div>
 				</form>
 			  </div>
@@ -616,10 +627,16 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/config.js"></script>
+  <script src="js/utilities.js"></script>
   <script src="js/clients/get-client-logos.js"></script>
+  <script src="js/form/contact.js"></script>
+  <script src="js/form/subscribe.js"></script>
 
   <script>
+	contactUs()
+	subscribeUs()
     Promise.all([getClientLogoImage("client-logo-image", "client-1"), getClientLogoImage("client-logo-image-2", "client-2")])
       .then(() => {
         console.log("Data loaded successfully");
