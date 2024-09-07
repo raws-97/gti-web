@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/gloc8132/public_html/
-    - /bin/cp index.html $DEPLOYPATH
+    - export DEPLOYPATH=/home/gloc8132/public_html #Add /<sub_folder> if required
+    - /bin/cp -r * $DEPLOYPATH
