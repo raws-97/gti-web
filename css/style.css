@@ -9357,7 +9357,6 @@ textarea.form-control {
   color: rgba(0, 0, 0, 0.8);
   padding: 20px; }
   .testimony-wrap-2 .user-img {
-    filter: grayscale(100%);
     max-width: 150px;
     position: relative; }
 
