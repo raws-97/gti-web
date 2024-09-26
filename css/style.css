@@ -9898,6 +9898,68 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
+
+.container-2 {
+  margin-left: auto;
+  margin-right: auto;
+}  
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #000f33;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 80%;
+  }
+  .col-3 {
+    flex-basis: 10%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 20px;
+        content: attr(data-label);
+        flex-basis: 90%;
+        text-align: right;
+      }
+    }
+  }
+}
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
