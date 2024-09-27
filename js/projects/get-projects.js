@@ -34,7 +34,7 @@ function createTableRowElement(projectData) {
     return `<div class="col-md-4">
 				<div class="mb-4 img justify-content-center align-items-center">
 					<center>
-						<img src="https://drive.google.com/thumbnail?id=${projectData.image_id}&sz=w800" style="width: 150px;">
+						<img src="https://drive.google.com/thumbnail?id=${projectData.image_id}&sz=w800" style="max-width: 250px; height: 120px;">
 					</center>
 					<div class="text" style="text-align: center; margin-top: 20px;">
 						<p>${projectData.project}</p>
