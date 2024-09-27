@@ -31,11 +31,16 @@ function createLatestListElements(data) {
 }
 
 function createTableRowElement(projectData) {
-    return `<li class="table-row">
-    <div class="col col-1" data-label="Client">${projectData.client}</div>
-    <div class="col col-2" data-label="Project">${projectData.project}</div>
-    <div class="col col-3" data-label="Year">${projectData.start_year} - ${projectData.end_year}</div>
-    </li>`
+    return `<div class="col-md-4">
+				<div class="mb-4 img justify-content-center align-items-center">
+					<center>
+						<img src="https://drive.google.com/thumbnail?id=${projectData.image_id}&sz=w800" style="width: 150px;">
+					</center>
+					<div class="text" style="text-align: center; margin-top: 20px;">
+						<p>${projectData.project}</p>
+					</div>
+				</div>
+			  </div>`
 }
 
 function createListRowElement(projectData) {
